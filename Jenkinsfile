@@ -7,12 +7,7 @@ pipeline{
         sh 'mvn compile'
       }       
     }
-    stage('Code Quality'){
-      agent any
-      steps{
-        sh 'echo Sonarqube Code Quality Check Done'
-      }
-    }
+
     stage('Package'){
       agent any
       steps{
